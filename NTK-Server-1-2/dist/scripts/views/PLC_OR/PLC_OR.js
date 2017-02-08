@@ -53,7 +53,7 @@ define(["backbone", "rivets", "views/item/WidgetMulti", "text!./template.js", "u
                 var i = this.model.get("threshold"),
                     e = [parseFloat(this.model.get("in1")), parseFloat(this.model.get("in2")), parseFloat(this.model.get("in3")), parseFloat(this.model.get("in4"))],
                     o = !1;
-]
+
 				// Supporting only OR functionality
                 for (var s = 0; s < e.length; s++) !isNaN(e[s]) && e[s] >= i && (o = !0);
                 o ? (this.$(".ifTrue").css("background-color", this.stateHighlight), this.$(".ifFalse").css("background-color", "#fff"), this.model.set("output", this.model.get("ifTrue"))) : (this.$(".ifTrue").css("background-color", "#fff"), this.$(".ifFalse").css("background-color", this.stateHighlight), this.model.set("output", this.model.get("ifFalse")))

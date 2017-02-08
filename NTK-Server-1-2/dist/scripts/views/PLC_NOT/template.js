@@ -11,9 +11,7 @@
         </div>
     </div>
 
-	
-	// The contents of widgetbody have been removed so that the widget ONLY
-	// operates as a NOT gate
+
     <div class="widgetBody">
 		
 		
