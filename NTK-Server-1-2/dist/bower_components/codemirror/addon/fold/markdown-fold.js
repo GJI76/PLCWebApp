@@ -1,0 +1,4 @@
+// CodeMirror, copyright (c) by Marijn Haverbeke and others
+// Distributed under an MIT license: http://codemirror.net/LICENSE
+
+!function(e){"object"==typeof exports&&"object"==typeof module?e(require("../../lib/codemirror")):"function"==typeof define&&define.amd?define(["../../lib/codemirror"],e):e(CodeMirror)}(function(e){e.registerHelper("fold","markdown",function(n,t){function r(t){var r=n.getTokenTypeAt(e.Pos(t,0));return r&&/\bheader\b/.test(r)}function i(e,n,t){var i=n&&n.match(/^#+/);return i&&r(e)?i[0].length:(i=t&&t.match(/^[=\-]+\s*$/),i&&r(e+1)?"="==t[0]?1:2:o)}var o=100,f=n.getLine(t.line),l=n.getLine(t.line+1),c=i(t.line,f,l);if(c===o)return void 0;for(var d=n.lastLine(),u=t.line,a=n.getLine(u+2);d>u&&!(i(u+1,l,a)<=c);)++u,l=a,a=n.getLine(u+2);return{from:e.Pos(t.line,f.length),to:e.Pos(u,n.getLine(u).length)}})});

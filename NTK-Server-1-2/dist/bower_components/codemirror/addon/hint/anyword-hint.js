@@ -1,0 +1,4 @@
+// CodeMirror, copyright (c) by Marijn Haverbeke and others
+// Distributed under an MIT license: http://codemirror.net/LICENSE
+
+!function(e){"object"==typeof exports&&"object"==typeof module?e(require("../../lib/codemirror")):"function"==typeof define&&define.amd?define(["../../lib/codemirror"],e):e(CodeMirror)}(function(e){var r=/[\w$]+/,o=500;e.registerHelper("hint","anyword",function(t,i){for(var n=i&&i.word||r,f=i&&i.range||o,a=t.getCursor(),c=t.getLine(a.line),l=a.ch,s=l;s&&n.test(c.charAt(s-1));)--s;for(var d=s!=l&&c.slice(s,l),p=[],u={},g=new RegExp(n.source,"g"),h=-1;1>=h;h+=2)for(var m=a.line,y=Math.min(Math.max(m+h*f,t.firstLine()),t.lastLine())+h;m!=y;m+=h)for(var b,v=t.getLine(m);b=g.exec(v);)(m!=a.line||b[0]!==d)&&(d&&0!=b[0].lastIndexOf(d,0)||Object.prototype.hasOwnProperty.call(u,b[0])||(u[b[0]]=!0,p.push(b[0])));return{list:p,from:e.Pos(a.line,s),to:e.Pos(a.line,l)}})});

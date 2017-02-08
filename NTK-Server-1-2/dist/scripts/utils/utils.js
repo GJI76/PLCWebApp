@@ -1,0 +1,1 @@
+define([],function(){return{async:function(n,i,t){window.setTimeout(function(){n.apply(i,t)},1)}}});

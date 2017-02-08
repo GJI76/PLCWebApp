@@ -1,0 +1,1 @@
+(function(){var t=this;t.define(["collections/Widgets"],function(){describe("Widgets Collection",function(){it("should be an instance of Widgets Collection",function(){var t=new t;expect(t).to.be.an.instanceof(t)}),it("should have more test written",function(){expect(!1).to.be.ok})})})}).call(this);

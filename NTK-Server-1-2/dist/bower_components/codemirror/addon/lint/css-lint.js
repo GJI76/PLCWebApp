@@ -1,0 +1,4 @@
+// CodeMirror, copyright (c) by Marijn Haverbeke and others
+// Distributed under an MIT license: http://codemirror.net/LICENSE
+
+!function(e){"object"==typeof exports&&"object"==typeof module?e(require("../../lib/codemirror")):"function"==typeof define&&define.amd?define(["../../lib/codemirror"],e):e(CodeMirror)}(function(e){e.registerHelper("lint","css",function(r){var o=[];if(!window.CSSLint)return o;for(var i=CSSLint.verify(r),n=i.messages,t=null,s=0;s<n.length;s++){t=n[s];var f=t.line-1,l=t.line-1,c=t.col-1,u=t.col;o.push({from:e.Pos(f,c),to:e.Pos(l,u),message:t.message,severity:t.type})}return o})});

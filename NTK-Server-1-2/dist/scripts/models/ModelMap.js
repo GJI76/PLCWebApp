@@ -1,0 +1,1 @@
+define(["models/ArduinoUno","models/OSC"],function(n,o){return{ArduinoUno:n,OSC:o}});

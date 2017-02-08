@@ -1,0 +1,1 @@
+Wreqr.RequestResponse=function(e,r){return e.Handlers.extend({request:function(e){return this.hasHandler(e)?this.getHandler(e).apply(this,r.rest(arguments)):void 0}})}(Wreqr,_);

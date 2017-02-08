@@ -1,0 +1,484 @@
+.widget {
+	position: relative;
+	top: 50px;
+	left: 120px;
+
+	display: block;
+
+
+	margin: 0;
+    
+    hr {
+        background-color: #eee;
+        border: 0 none;
+        color: #eee;
+        height: 1px;
+    }
+    
+	.remove {
+		float: right;
+		width: 0.7em;
+	}
+
+	.title {
+        padding-top: 1px;
+        padding-left: 3px;
+        font-size: 16px;
+        color: white;
+	}
+    .title input[type=text] {
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        width: 68px;
+    }
+
+	input[type='range'] {
+		width: 80px;
+	}
+	.dragHandle {
+		cursor: move;
+	}
+
+	.outlet, .inlet {
+
+		height: 24px;
+		width: 20px;
+        margin-bottom: 2px;
+
+		font-size: 34px;
+		color: #999;
+        line-height: 22px;
+
+		cursor: move;
+
+		.unMap {
+			cursor: pointer;
+		}
+	}
+
+
+	.inlets {
+		/*position: absolute;*/
+/*		top: 0;
+		left: 0;*/
+		clear: both;
+		width: 100%;
+		height: 24px;
+
+		/* border-radius: 0px 0px 5px 5px; */
+
+
+		.inlet {
+
+/*			top: 0;
+			float: left;*/
+			width: 25px;
+            background-color:#666;
+            border-radius: 5px 0px 0px 5px;
+		}
+		.inlet:first-child {
+			/*border-radius: 5px 0px 0px 5px;*/
+		}
+
+		.inlet.hover {
+			background-color: #000;
+		}
+		.inlet.connected {
+			color: #333;
+		}
+
+	}
+	.outlets {
+		width: 25px;
+		height: 24px;
+		clear: both;
+
+		border-radius: 0px 5px 5px 0px;
+
+		.outlet {
+			width: 20px;
+			background-color:#666;
+            border-radius: 0px 5px 5px 0px;
+		}
+/*		.outlet:first-child {
+			border-radius: 0px 5px 5px 0px;
+		}*/
+
+
+	}
+    .dot {
+        margin-right: 2px;
+        float: right;
+    }
+	.dialwrapper {
+		margin-top:5px;
+        margin-left:8px;
+	}
+
+	.dialwrapper .display {
+		position:absolute;
+		left:13px;
+		right:20px;
+		font-size:20px;
+		text-align:center;
+	}
+	.dialwrapper .invalue {
+		top:20px;
+		font-size:14px;
+	}
+
+	.dialwrapper .outvalue {
+		top:36px;
+	}
+
+    .rangeTable {
+        margin-left: 2px;
+        width: 95%;
+
+        tr td {
+            text-align: center;
+        }
+    }
+
+    table tr td .range-input {
+        width: 30px;
+        height: 8px;
+    }
+
+	.options {
+	    width: 100%;
+	    height: 30px;
+	    margin-top: 3px;
+        margin-left: 3px;
+	}
+
+	.options ul {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	}
+
+	.options li {
+	    display: inline-block;
+	    float: left;
+	    width: 30%;
+
+		cursor: pointer;
+
+	    color: #000;
+	    font-family: 'Helvetica Neue', sans-serif;
+	    font-size: 1em;
+	    font-weight:bold;
+	    text-align:center;
+
+	    border: 1px solid #fff;
+	    background-color: #ccc;
+	}
+
+	.options li:hover {
+	    color: #FFF;
+	}
+    
+    .operator {
+        width: 44px;
+    }
+    .operatorWide {
+        width: 75px;
+    }
+
+    .widgetTop {
+        width: 94px;
+        height: 24px;
+        margin-left: 25px;
+        background-color: #ddd;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+		border: 2px solid #98a6ac;
+		border-bottom: 0;
+    }
+    .widgetLeft {
+        margin: 0;
+        float:left;
+        width: 25px;
+        /*height: 100px;*/
+        margin-top: 0px;
+
+        .leftTab {
+            margin-bottom: 1px;
+            background-color: #666;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+
+            .settings input {
+                margin-top: 3px;
+                margin-left: 3px;
+                margin-bottom: 3px;
+
+            }
+        }
+    }
+    .widgetLeft input[type='text'] {
+        font-family: Arial;
+        font-size: 10px;
+        margin-left: 1px;
+        width: 60%;
+    }
+    
+    
+
+    .widgetBody {
+        background-color: whitesmoke;
+        float:left;
+        width: 94px;
+        height: 110px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+		border: 2px solid #98a6ac;
+		border-top: 0;
+        
+        .widgetBodyLeft {
+            float: left;   
+        }
+        
+        .widgetBodyRight {
+            float: right;   
+        }
+        
+        .inletValue {
+            
+            margin-top: 6px;
+            margin-left: 2px;
+            height: 20px;
+            
+            clear: both;
+            
+        }
+        
+        .inletValueInput {
+            
+            margin-top: 6px;
+            margin-left: 0px;
+            height: 20px;
+            
+            clear: both;
+            
+            input {
+                margin-left: 0px;
+            }
+            
+        }
+        
+        .outletValue {
+            
+            margin-top: 4px;
+            margin-bottom: 0px;
+            height: 22px;
+            width: 64px;
+            margin-right: 0px;
+            margin-left: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            clear: both;
+            
+            .outputParam {
+                width: 25px;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-left: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+        
+        .fullWidthInput {
+            margin-top: 3px;
+            width: 90% !important;
+            text-align: center;
+        }
+        
+        .outputSingle {
+            padding-left: 32px; 
+        }
+        
+        .inletValueTop {
+            margin-top: 20px;
+        }
+        
+        input[type='checkbox'] {
+            width: 12px;
+        }
+        
+        .timeLeft {
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        
+        .ifFalse {
+            background-color: #f8c885;
+        }
+        
+        .ifStatement {
+            background-color: #c6c6c6;
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            padding: 0px;
+            text-align: right;
+            
+            .outputParam {
+                width: 26px;
+                margin-top: 0px;
+                margin-right: 0px;
+                margin-left: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+    
+        .ifTop {
+            background-color: #c6c6c6;
+        }
+        
+        label {
+            display: inline-block;
+            width: 60px;
+        }
+        
+    }
+
+    .widgetBody input[type='text'] {
+        font-family: Arial;
+        font-size: 11px;
+        margin-left: 0px;
+        padding: 0px;
+        width: 25px;
+        height: 12px;
+    }
+    
+    
+    .widgetOutput {
+        width: 12px;
+        height: 24px;
+        margin-bottom: 1px;
+        background-color: #cec9c9;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .widgetRight {
+        float: left;
+        margin-top: 0px;
+        width: 25px;
+
+        .rightTab {
+            margin-bottom: 1px;
+            background-color: #666;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            .settings input {
+                margin-top: 3px;
+                margin-right: 0px;
+                margin-bottom: 3px;
+
+            }
+        }
+    }
+
+    .widgetRight input[type=text] {
+        font-family: Arial;
+        font-size: 10px;
+        margin-left: 1px;
+        margin-right: 0px;
+        width: 60%;
+    }
+
+    .widgetBottom {
+        clear: both;
+        margin-left: 25px;
+
+        .tab {
+            width: 86px;
+            height: 14px;
+            background-color: #cec9c9;
+            margin-left: 5px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            p {
+                font-size: 10px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+        }
+
+        .content {
+            padding: 5px;
+            margin-left: 5px;
+            border-radius: 5px;
+            
+            background-color: #fff;
+            
+            label {
+                display: inline-block;
+                width: 60px;
+            }
+            
+            label.wide-label {
+                width: 125px;
+            }
+            
+            .narrowLabel {
+                width: 30px;
+            }
+            
+            .moreParam {
+                width: 40px;
+            }
+        }
+        
+        
+        
+        
+    }
+
+    .typeIO {
+    	background-color: #E57373; 
+    }
+    .typeNetwork {
+    	background-color: #FF8A65; 
+    }
+    .typeMedia {
+    	background-color: #4DB6AC; 
+    }
+    .typeGenerator {
+    	background-color: #AED581; 
+    }
+    .typeLogic {
+    	background-color: #64B5F6;
+    }
+    .typeUI {
+    	background-color: #BA68C8;
+    }
+}
+
+.detachedEl {
+	position: fixed;
+    
+    .ui-button.ui-widget {
+/*        width: 200px !important;
+        height: 200px !important;*/
+    }
+    
+    .ui-button .ui-button-text {
+/*        font-size: 2.0em !important;*/
+    }
+}
+
+.dialwrapperUI {
+    margin-top: 5px;
+}

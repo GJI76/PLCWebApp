@@ -1,0 +1,1 @@
+define(["backbone","text!tmpl/Canvas_tmpl.js"],function(e,t){return e.View.extend({initialize:function(){},template:_.template(t),className:"mainCanvas",events:{},render:function(){return this.el.innerHTML=this.template(),this}})});

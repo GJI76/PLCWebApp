@@ -1,0 +1,1 @@
+define(["backbone","models/WidgetConfig"],function(e,n){return e.Collection.extend({initialize:function(){},model:n})});

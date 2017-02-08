@@ -1,0 +1,1 @@
+define(["application","backbone","controllers/ToolBar"],function(o,n,t){var i=function(o,n){this.Controller=new t(n.toolBarRegion),this.addInitializer($.proxy(this.Controller.attachMainViews,this.Controller))};return i});

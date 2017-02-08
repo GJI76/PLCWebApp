@@ -1,0 +1,244 @@
+
+
+#toolBarRegion .settings,
+#toolBarRegion .addWidgets
+{
+	position: fixed;
+	display: block;
+	width: 250px;
+	height: 100%;
+
+	margin: 0;
+	padding: 0;
+
+
+	font-family: 'Helvetica Neue', sans-serif;
+	font-size: 16px;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	overflow-y: auto;
+	overflow-x: hidden;
+
+
+
+}
+
+#toolBarRegion .settings {
+	top: 0;
+	left: -75px;
+	-webkit-transition: left 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+	transition: left 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+
+	width: 75px;
+
+	background-color: dimgray;
+
+	&.open {
+		left: 0px;
+	}
+
+
+    
+	.downloadPatch,
+	.loadPatch, .savePatch, .hideWidgets, .clearPatch, .fullScreen, .serverSwitch, .logo {
+		float: left;
+		width: calc(75px - 20px);
+		height: auto;
+		padding: 10px;
+
+		font-size: 0.75em;
+
+		color: white;
+
+		cursor: pointer;
+	}
+
+	.loadPatch, .savePatch, .downloadPatch, .hideWidgets, .fullScreen, .clearPatch, .serverSwitch, .logo {
+		background-color: dimgrey;
+		border-bottom: 1px solid grey;
+		margin-bottom: 0;
+	}
+    
+    .serverSwitch {
+        background-color: LightSlateGray;
+    }
+    
+    .logo {
+        cursor: auto;
+    }
+
+	.serverSwitch.serverActive {
+		background: #F25151;
+	}
+	.version {
+		position: absolute;
+		bottom: 0;
+		color: #fff;
+		font-size: smaller;
+
+		a {
+			color: #F25151;
+			text-decoration: none;
+			font-weight: bold;
+		}
+	}
+}
+
+#toolBarRegion .addWidgets {
+	top:0;
+	right: -250px;
+	left: initial;
+
+	-webkit-transition: right 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+	transition: right 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+
+	background-color: #ddd;
+
+	&.open {
+		right: 0;
+	}
+
+	h1 {
+		font-size: 1.25em;
+		font-weight: normal;
+		padding: 10px;
+		background-color: dimgray;
+		color: whitesmoke;
+		margin: 0;
+	}
+	.category {
+		float: left;
+		width: calc(250px - 20px);
+		height: 15px;
+		padding: 10px;
+
+		background-color: darkgrey;
+		color: #000;
+
+		/*border-radius: 4px;*/
+		cursor: pointer;
+
+		text-transform: capitalize;
+		border-bottom: 1px solid #bbb;
+	}
+	.addWidget {
+		float: left;
+		width: calc(250px - 20px);
+		height: 15px;
+		padding: 10px;
+
+		background-color: #ddd;
+		color: #000;
+
+		/*border-radius: 4px;*/
+		cursor: pointer;
+		border-bottom: 1px solid darkgrey;
+	}
+    
+    .catI-O {
+    	border-left: 7px solid #E53935; 
+    }
+    .catNETWORK {
+    	border-left: 7px solid #F4511E; 
+    }
+    .catMEDIA {
+    	border-left: 7px solid #00897B; 
+    }
+    .catGENERATOR {
+    	border-left: 7px solid #7CB342; 
+    }
+    .catLOGIC {
+    	border-left: 7px solid #1E88E5;
+    }
+    .catUI {
+    	border-left: 7px solid #8E24AA;
+    }   
+    .catNETWORK {
+        border-left: 7px solid #F4511E;
+    }
+    
+    .widgetI-O {
+    	color: #E53935; 
+    }
+    .widgetNETWORK {
+    	color: #F4511E; 
+    }
+    .widgetMEDIA {
+    	color: #00897B; 
+    }
+    .widgetGENERATOR {
+    	color: #7CB342; 
+    }
+    .widgetLOGIC {
+    	color: #1E88E5;
+    }
+    .widgetUI {
+    	color: #8E24AA;
+    }   
+    .widgetNETWORK {
+        color: #F4511E;
+    }
+
+	ul {
+		display: none;
+
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+	}
+}
+
+#toolBarRegion {
+	position: absolute;
+	
+	.menuBar {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+
+		-webkit-transition: right 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+		transition: right 0.25s cubic-bezier(0.55, 0, 0.1, 1);
+
+		width: 58px;
+		height: 58px * 3;
+
+		-webkit-user-select: none;
+		user-select: none;
+
+		.openAddWidgets, .openSettings {
+			position: relative;
+			float: left;
+			width: 50px;
+			height: 50px;
+
+			margin-bottom: 15px;
+
+			z-index: 3;
+
+			background-color: whitesmoke;
+			color: darkgrey;
+			text-align: center;
+			font-size: 3em;
+
+			border-radius: 50%;
+			border: 3px solid darkgrey;
+
+			.text {
+				position: absolute;
+				left: 26%;
+				top: -12%;
+			}
+		}
+	}
+
+	.menuBar.open {
+		right: 250px;
+	}
+}

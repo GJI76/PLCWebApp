@@ -1,0 +1,1 @@
+define([],function(){return{specs:["spec/collections/Widgets.js"]}});

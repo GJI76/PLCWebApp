@@ -1,0 +1,1 @@
+define(["application","backbone","controllers/Patcher"],function(t,n,i){var r=function(t,n){this.Controller=new i(n.patcherRegion),this.addInitializer($.proxy(this.Controller.attachMainViews,this.Controller))};return r});

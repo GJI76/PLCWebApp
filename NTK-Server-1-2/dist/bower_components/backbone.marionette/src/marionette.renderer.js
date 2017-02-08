@@ -1,0 +1,1 @@
+Marionette.Renderer={render:function(e,r){e||throwError("Cannot render the template since its false, null or undefined.","TemplateNotFoundError");var t;return(t="function"==typeof e?e:Marionette.TemplateCache.get(e))(r)}};

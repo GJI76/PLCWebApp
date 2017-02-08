@@ -1,0 +1,1 @@
+define([],function(){return{scale:function(t,n){var r,e=parseInt(n.inputCeiling,10),i=parseInt(n.outputCeiling,10),u=parseInt(n.inputFloor,10),a=parseInt(n.outputFloor,10),o=e-u,p=i-a,l=p/o;return r=(parseFloat(t,10)-u)*l+a},invert:function(t,n){var r=parseFloat(t,10);return n.invert&&(r=r-2*r+parseInt(n.outputCeiling,10)),r}}});

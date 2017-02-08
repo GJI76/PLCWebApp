@@ -1,0 +1,1 @@
+define(["backbone","rivets","text!tmpl/item/Widget_tmpl.js","jqueryui","jquerytouchpunch"],function(e,t,i){return e.Marionette.ItemView.extend({className:"widgetSettings",template:_.template(i),initialize:function(){},onRender:function(){t.bind(this.$el,{widget:this.model}),this.$el.draggable({handle:".dragHandle"})}})});
